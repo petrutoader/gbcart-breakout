@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.1.0">
+<eagle version="9.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -1314,8 +1314,11 @@ https://www.aliexpress.com/item/For-Nintendo-DS-NDSL-GBA-Game-Cartridge-Card-Rea
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0.0889" drill="0.2">
-<clearance class="0" value="0.0889"/>
+<class number="0" name="default" width="0.127" drill="0.5">
+<clearance class="0" value="0.127"/>
+</class>
+<class number="1" name="power" width="0.3048" drill="0.5">
+<clearance class="1" value="0.127"/>
 </class>
 </classes>
 <parts>
@@ -1331,18 +1334,37 @@ https://www.aliexpress.com/item/For-Nintendo-DS-NDSL-GBA-Game-Cartridge-Card-Rea
 <plain>
 </plain>
 <instances>
-<instance part="FRAME1" gate="G$1" x="-106.68" y="-33.02"/>
-<instance part="FRAME1" gate="G$2" x="40.64" y="-33.02"/>
-<instance part="ADDRESS" gate="A" x="-33.02" y="60.96" rot="R270"/>
-<instance part="CONTROL" gate="A" x="-81.28" y="83.82" rot="R180"/>
-<instance part="DIGITAL" gate="A" x="-5.08" y="73.66" rot="R270"/>
-<instance part="MISC" gate="A" x="27.94" y="96.52"/>
-<instance part="U$1" gate="G$1" x="-25.4" y="119.38" rot="R180"/>
+<instance part="FRAME1" gate="G$1" x="-106.68" y="-33.02" smashed="yes"/>
+<instance part="FRAME1" gate="G$2" x="40.64" y="-33.02" smashed="yes">
+<attribute name="LAST_DATE_TIME" x="53.34" y="-31.75" size="2.54" layer="94"/>
+<attribute name="SHEET" x="127" y="-31.75" size="2.54" layer="94"/>
+<attribute name="DRAWING_NAME" x="58.42" y="-13.97" size="2.54" layer="94"/>
+</instance>
+<instance part="ADDRESS" gate="A" x="-33.02" y="60.96" smashed="yes" rot="R270">
+<attribute name="NAME" x="-12.065" y="67.31" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-58.42" y="67.31" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="CONTROL" gate="A" x="-81.28" y="83.82" smashed="yes" rot="R180">
+<attribute name="NAME" x="-74.93" y="75.565" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="-74.93" y="93.98" size="1.778" layer="96" rot="R180"/>
+</instance>
+<instance part="DIGITAL" gate="A" x="-5.08" y="73.66" smashed="yes" rot="R270">
+<attribute name="NAME" x="8.255" y="80.01" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-17.78" y="80.01" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="MISC" gate="A" x="27.94" y="96.52" smashed="yes">
+<attribute name="NAME" x="21.59" y="102.235" size="1.778" layer="95"/>
+<attribute name="VALUE" x="21.59" y="88.9" size="1.778" layer="96"/>
+</instance>
+<instance part="U$1" gate="G$1" x="-25.4" y="119.38" smashed="yes" rot="R180">
+<attribute name="NAME" x="15.24" y="129.54" size="1.27" layer="95" rot="R180"/>
+<attribute name="VALUE" x="15.24" y="132.08" size="1.27" layer="96" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="VCC" class="0">
+<net name="VCC" class="1">
 <segment>
 <wire x1="-66.04" y1="109.22" x2="-66.04" y2="88.9" width="0.1524" layer="91"/>
 <pinref part="CONTROL" gate="A" pin="5"/>
@@ -1494,7 +1516,7 @@ https://www.aliexpress.com/item/For-Nintendo-DS-NDSL-GBA-Game-Cartridge-Card-Rea
 <pinref part="U$1" gate="G$1" pin="A6"/>
 </segment>
 </net>
-<net name="GND" class="0">
+<net name="GND" class="1">
 <segment>
 <wire x1="12.7" y1="109.22" x2="12.7" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="MISC" gate="A" pin="1"/>

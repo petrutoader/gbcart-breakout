@@ -1,5 +1,5 @@
 [Eagle]
-Version="09 01 00"
+Version="09 02 02"
 Platform="Mac OS X"
 Globals="Globals"
 Desktop="Desktop"
@@ -382,6 +382,7 @@ UsedLibraryUrn="urn:adsk.eagle:library:175"
 UsedLibraryUrn="urn:adsk.eagle:library:176"
 UsedLibraryUrn="urn:adsk.eagle:library:177"
 UsedLibrary="/Users/petru/Documents/EAGLE/libraries/GBIO"
+UsedLibrary="/Users/petru/Documents/EAGLE/libraries/submodule/submodule.lbr"
 
 [Win_1]
 Type="Control Panel"
